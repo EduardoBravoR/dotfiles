@@ -1,0 +1,74 @@
+
+* {
+    font-family: 'Radio Canada Big', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+#workspaces button {
+    color: #ABB2BF;
+}
+
+#workspaces button.active {
+    color: #E5C07B;
+}
+
+#workspaces button.empty {
+    color: #5C6370;
+}
+
+.modules-left {
+    background-color: transparent;
+    margin-left: 12px;
+}
+
+.modules-center {
+    background-color: transparent;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.modules-right {
+    background-color: transparent;
+    margin-right: 12px;
+}
+
+#workspaces {
+    background-color: #282C34;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 5px;
+}
+
+#custom-mic {
+    background-color: #98C379;
+    color: #282C34;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#clock {
+    background-color: #282C34;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#network,
+#pulseaudio,
+#backlight {
+    background-color: #282C34;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 5px;
+}
+
+#battery {
+    background-color: #282C34;
+    padding-left: 15px;
+    padding-right: 15px;
+}

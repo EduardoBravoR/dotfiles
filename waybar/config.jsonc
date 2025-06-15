@@ -1,0 +1,101 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-top": 13,
+  "modules-left": ["hyprland/workspaces", "custom/mic"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "pulseaudio", "backlight", "battery"],
+  
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "urgent": "󰀨",
+      "active": "",
+      "default": ""
+    },
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "*": 6 // This is the new key addition
+    }
+  },
+
+  "custom/mic": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/mic_status.sh",
+    "interval": 1, // Check every 1 second
+    "tooltip": false, // Optional: Set to true if you want a tooltip (e.g., "Microphone in use")
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle", // Optional: Toggle mic mute on click
+    "on-click-right": "pavucontrol", // Optional: Open PulseAudio Volume Control on right-click
+    "class": "custom-mic"
+  },
+
+  "custom/media": {
+    "format": "{icon}{}",
+    "escape": true,
+    "return-type": "json",
+    "max-length": 40,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl stop",
+    "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources/custom_modules folder
+  },
+
+  "clock": {
+    "format": "󰥔   {:%I:%M %p}",
+    "format-alt": "󰥔   {:%a, %d. %b  %I:%M %p}"
+  },
+
+  "network": {
+    "interface": "wlan0",
+    "format": "{icon}",
+    "format-wifi": "{icon}   {bandwidthUpBits}  {bandwidthDownBits}",
+    "format-ethernet": "󰈀    {bandwidthUpBits}  {bandwidthDownBits}",
+    "format-disconnected": "󰤭 ",
+    "format-alt": "{icon}   {essid}",
+    "max-length": 50,
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+  },
+
+  "custom/pacman": {
+    "format": " {}    ",
+    "interval": "once",
+    "exec": "checkupdates | wc -l",
+    "on-click": "update-system",
+    "signal": 8,
+    "class": "custom-pacman"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "󰂱  {volume}%",
+    "format-muted": "󰖁",
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"],
+    "format-icons": {
+      "headphone": "  ",
+      "hands-free": " ",
+      "headset": "󰋎 ",
+      "phone": " ",
+      "portable": " ",
+      "car": "",
+      "default": ["󰖀", "󰕾"]
+    }
+  },
+  
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}   {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"]
+  },
+ 
+  "battery": {
+    "format": "{icon}  {capacity}%",
+    "format-charging": "󰂄  {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  }
+}
