@@ -1,12 +1,13 @@
 {
+  "output": "eDP-1",
   "layer": "top",
   "position": "top",
   "margin-top": 13,
-  "modules-left": ["hyprland/workspaces", "custom/mic", "custom/camera", "custom/capslock"],
+  "modules-left": ["hyprland/workspaces#internal", "custom/mic", "custom/camera", "custom/capslock"],
   "modules-center": ["clock"],
   "modules-right": ["bluetooth", "network", "pulseaudio", "backlight", "battery"],
 
-  "hyprland/workspaces": {
+  "hyprland/workspaces#internal": {
     "format": "{icon}",
     "on-click": "activate",
     "format-icons": {
@@ -15,11 +16,11 @@
       "default": ""
     },
     "sort-by-number": true,
+    "all-outputs": false,
     "persistent-workspaces": {
-      "*": 6
+      "eDP-1": [1, 2, 3]
     },
-    "all-outputs": false, // Important: Set to false for per-monitor config
-    "show-special": false // If you don't want the "magic" scratchpad to show up in the main list
+    "show-special": false
   },
 
   "custom/mic": {
