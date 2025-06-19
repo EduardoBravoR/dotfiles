@@ -54,27 +54,27 @@ keymap("n", "<C-u>", "<C-u>zz", opts)
 keymap("n", "<C-d>", "<C-d>zz", opts)
 
 -- Split management
-keymap("n", "<leader>sh", ":split<CR>", opts)
-keymap("n", "<leader>sv", ":vsplit<CR>", opts)
+keymap("n", "<leader>h", ":split<CR>", opts)
+keymap("n", "<leader>v", ":vsplit<CR>", opts)
 -- Close / Manage splits
 keymap("n", "<leader>sc", ":close<CR>", opts)
 keymap("n", "<leader>so", ":only<CR>", opts)
 -- Navigate splits
--- keymap("n", "<C-e>", "<C-W>j", opts)
--- keymap("n", "<C-u>", "<C-W>k", opts)
--- keymap("n", "<C-n>", "<C-W>h", opts)
--- keymap("n", "<C-i>", "<C-W>l", opts)
+keymap("n", "<C-Up>", "<C-W>j", opts)
+keymap("n", "<C-Down>", "<C-W>k", opts)
+keymap("n", "<C-Left>", "<C-W>h", opts)
+keymap("n", "<C-Right>", "<C-W>l", opts)
 -- Resize splits
--- keymap("n", "<C-Up>", ":resize +2<CR>", opts)
--- keymap("n", "<C-Down>", ":resize -2<CR>", opts)
--- keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
--- keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
--- keymap("n", "<leader>=", "<C-w>=", opts) -- Equalize
+keymap("n", "<S-Up>", ":resize +2<CR>", opts)
+keymap("n", "<S-Down>", ":resize -2<CR>", opts)
+keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<leader>=", "<C-w>=", opts) -- Equalize
 
 -- Buffer navigation
-keymap("n", "<leader>bn", ":bnext<CR>", opts)
-keymap("n", "<leader>bp", ":bprevious<CR>", opts)
-keymap("n", "<leader>bd", ":bd<CR>", opts)
+keymap("n", "<Tab>", ":bnext<CR>", opts)
+keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
+keymap("n", "<leader>bc", ":bd<CR>", opts)
 keymap("n", "<leader>ba", ":%bd<CR>", opts)
 
 -- Reload current Lua file
