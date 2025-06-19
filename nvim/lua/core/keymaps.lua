@@ -19,6 +19,9 @@ keymap("n", "<leader>q", ":q<CR>", opts)
 -- Select all
 keymap("n", "<C-a>", "ggVG", opts)
 
+-- Keep last yanked when pasting
+keymap("v", "<leader>p", "\"_dP", opts)
+
 -- Keep search terms centered
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
@@ -58,7 +61,7 @@ keymap("n", "<leader>h", ":split<CR>", opts)
 keymap("n", "<leader>v", ":vsplit<CR>", opts)
 -- Close / Manage splits
 keymap("n", "<leader>sc", ":close<CR>", opts)
-keymap("n", "<leader>so", ":only<CR>", opts)
+keymap("n", "<leader>sa", ":only<CR>", opts)
 -- Navigate splits
 keymap("n", "<C-Up>", "<C-W>j", opts)
 keymap("n", "<C-Down>", "<C-W>k", opts)
