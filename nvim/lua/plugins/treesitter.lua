@@ -6,7 +6,7 @@ return
     build = ":TSUpdate",
     config = function()
         require("nvim-treesitter.configs").setup {
-            auto_insall = true,
+            auto_install = true,
             ensure_installed = {
                 "lua",
                 "python",
@@ -19,11 +19,11 @@ return
                 "java"
             },
             highlight = {
-                enable = true,
+                enable = true
             },
             indent = {
-                enable = true,
-            },
+                enable = true
+            }
         }
-    end,
+    end
 }
