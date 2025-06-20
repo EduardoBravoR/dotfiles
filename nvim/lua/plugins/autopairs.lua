@@ -1,7 +1,7 @@
-local autopairs_setup, autopairs = pcall(require, "nvim-autopairs")
-
-if not autopairs_setup then
-	return
-end
-
-autopairs.setup({})
+return {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
+    -- use opts = {} for passing setup options
+    -- this is equivalent to setup({}) function
+}
