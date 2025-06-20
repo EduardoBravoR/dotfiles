@@ -70,6 +70,9 @@ keymap("n", "<leader>fh", ":Telescope help_tags<CR>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+-- Git
+keymap("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", opts)
+keymap("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", opts)
 -- LSP Formatting (optional, enable if LSP is configured)
 -- keymap("n", "<leader>lf", function() vim.lsp.buf.format() end, opts)
 
