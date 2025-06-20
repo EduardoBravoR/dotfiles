@@ -1,6 +1,7 @@
 local ok, err = pcall(function()
   require("core.options")
   require("core.keymaps")
+  require("core.autocmds")
   require("core.theme")
   require("core.plugins")
 end)
