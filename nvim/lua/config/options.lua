@@ -24,12 +24,12 @@ opt.smartindent = true
 
 -- Listchars
 opt.list = true
-opt.listchars = {
-  space = "⋅",
-  tab = "→ ",
-  trail = "·",
-  eol = "↴",
-}
+-- opt.listchars = {
+--   space = "⋅",
+--   tab = "→ ",
+--   trail = "·",
+--   eol = "↴",
+-- }
 
 -- Search
 opt.ignorecase = true

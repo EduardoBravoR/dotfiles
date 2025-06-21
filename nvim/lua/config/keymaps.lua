@@ -73,6 +73,14 @@ keymap("v", ">", ">gv", opts)
 -- Git
 keymap("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", opts)
 keymap("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", opts)
+
+-- LSP
+keymap("n", "K", vim.lsp.buf.hover, opts)--Hover documentation
+keymap("n", "gd", vim.lsp.buf.definition, opts)
+keymap("n", "gD", vim.lsp.buf.declaration, opts)
+keymap("n", "gr", vim.lsp.buf.references, opts)
+keymap("n", "gi", vim.lsp.buf.implementation, opts)
+keymap({"n", "v"}, "<leader>ca", vim.lsp.buf.code_action, opts)
 -- LSP Formatting (optional, enable if LSP is configured)
 -- keymap("n", "<leader>lf", function() vim.lsp.buf.format() end, opts)
 
