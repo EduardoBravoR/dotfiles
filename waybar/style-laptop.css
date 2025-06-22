@@ -64,9 +64,8 @@ window#waybar {
     margin-right: 5px;
 }
 
-#custom-capslock {
-    background-color: #ABB2BF;
-    color: #282C34;
+#keyboard-state {
+    color: #ABB2BF;
     padding-left: 15px;
     padding-right: 15px;
 }

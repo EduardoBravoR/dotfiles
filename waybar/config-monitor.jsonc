@@ -3,7 +3,7 @@
   "layer": "top",
   "position": "top",
   "margin-top": 13,
-  "modules-left": ["hyprland/workspaces#external", "custom/mic", "custom/camera", "custom/capslock"],
+  "modules-left": ["hyprland/workspaces#external", "custom/mic", "custom/camera", "keyboard-state"],
   "modules-center": ["clock"],
   "modules-right": ["bluetooth", "network", "pulseaudio", "backlight", "battery"],
 
@@ -42,12 +42,15 @@
     "class": "custom-camera"
   },
 
-  "custom/capslock": {
-    "interval": 1,
-    "exec": "~/.config/waybar/scripts/capslock.sh",
-    "return-type": "json",
-    "tooltip": false,
-    "class": "custom-capslock"
+  "keyboard-state":{
+    "capslock": true,
+    "format": "{icon}",
+    "format-icons":{
+      "locked": " A",
+      "unlocked": ""
+    },
+    "device-path": "/dev/input/by-path/pci-0000:00:14.0-usb-0:2:1.0-event-kbd"
+    // Execute this command to identify device name: ls -l /dev/input/by-path/{device-name}
   },
 
   "clock": {
