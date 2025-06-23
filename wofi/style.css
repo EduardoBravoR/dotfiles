@@ -2,6 +2,7 @@ window {
     margin: 0px;
     border: none;
     background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
 }
 
 #input {
@@ -15,12 +16,6 @@ window {
     margin: 5px;
     border: none;
     background-color: rgba(40, 44, 52, 0.4);
-}
-
-#outer-box {
-    margin: 5px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #scroll {
