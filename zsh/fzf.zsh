@@ -1,21 +1,20 @@
 # Fuzzy file finder with bat preview
+export FZF_DEFAULT_OPTS="--height=80% --layout=reverse --border=rounded --margin=5%"
 fzf_find_file() {
   local file
   file=$(fd --type f --hidden --exclude .git . | \
-    fzf --height=40% --layout=reverse --border \
-        --preview 'bat --style=numbers --color=always --line-range :100 {}' \
-        --preview-window=right:60%) && \
-  nvim "$file"
+      fzf --preview='bat --style=numbers --color=always --line-range :100 {}' \
+      --preview-window=right:60%) \
+      && nvim "$file"
 }
 
 # Fuzzy directory finder with eza tree preview
 fzf_cd() {
   local dir
   dir=$(fd --type d --hidden --exclude .git . | \
-    fzf --height=40% --layout=reverse --border \
-        --preview 'eza --color=always --icons --tree --level=2 {}' \
-        --preview-window=right:60%) && \
-  cd "$dir"
+    fzf --preview='eza --color=always --icons --tree --level=2 {}' \
+    --preview-window=right:60%) \
+    && cd "$dir"
 }
 
 fzf_history() {
