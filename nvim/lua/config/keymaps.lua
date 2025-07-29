@@ -16,7 +16,7 @@ keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<C-a>", "ggVG", opts)
 
 -- Keep last yanked when pasting
-keymap("v", "<leader>p", "\"_dP", opts)
+keymap("v", "<leader>p", '"_dP', opts)
 
 -- Keep search terms centered
 keymap("n", "n", "nzzzv", opts)
@@ -75,12 +75,40 @@ keymap("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", opts)
 keymap("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", opts)
 
 -- LSP
-keymap("n", "K", vim.lsp.buf.hover, opts)--Hover documentation
-keymap("n", "gd", vim.lsp.buf.definition, opts)
-keymap("n", "gD", vim.lsp.buf.declaration, opts)
-keymap("n", "gr", vim.lsp.buf.references, opts)
-keymap("n", "gi", vim.lsp.buf.implementation, opts)
-keymap({"n", "v"}, "<leader>ca", vim.lsp.buf.code_action, opts)
+-- keymap("n", "K", vim.lsp.buf.hover, opts)
+-- keymap("n", "gd", vim.lsp.buf.definition, opts)
+-- keymap("n", "gD", vim.lsp.buf.declaration, opts)
+-- keymap("n", "gr", vim.lsp.buf.references, opts)
+-- keymap("n", "gi", vim.lsp.buf.implementation, opts)
+-- keymap({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
+-- keymap("n", "<leader>gf", vim.lsp.buf.format, opts)
+
+local M = {}
+
+function M.on_attach(client, bufnr)
+	local function buf_map(mode, lhs, rhs, desc)
+		vim.keymap.set(mode, lhs, rhs, {
+			noremap = true,
+			silent = true,
+			buffer = bufnr,
+			desc = desc,
+		})
+	end
+
+	buf_map("n", "gd", vim.lsp.buf.definition, "Go to definition")
+	buf_map("n", "gD", vim.lsp.buf.declaration, "Go to declaration")
+	buf_map("n", "K", vim.lsp.buf.hover, "Hover")
+	buf_map("n", "gi", vim.lsp.buf.implementation, "Go to implementation")
+	buf_map("n", "gr", vim.lsp.buf.references, "References")
+	buf_map("n", "<leader>rn", vim.lsp.buf.rename, "Rename")
+	buf_map("n", "<leader>ca", vim.lsp.buf.code_action, "Code action")
+	buf_map("n", "<leader>gf", function()
+		vim.lsp.buf.format({ async = true })
+	end, "Format buffer")
+end
+
+return M
+
 -- LSP Formatting (optional, enable if LSP is configured)
 -- keymap("n", "<leader>lf", function() vim.lsp.buf.format() end, opts)
 
