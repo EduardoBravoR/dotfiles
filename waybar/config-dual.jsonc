@@ -4,9 +4,9 @@
         "layer": "top",
         "position": "top",
         "margin-top": 13,
-        "modules-left": ["hyprland/workspaces#internal", "custom/mic", "custom/camera", "keyboard-state"],
+        "modules-left": ["hyprland/workspaces#internal", "custom/mic", "custom/camera"],
         "modules-center": ["clock"],
-        "modules-right": ["bluetooth", "network", "pulseaudio", "backlight", "battery"],
+        "modules-right": ["hyprland/language", "bluetooth", "network", "pulseaudio", "backlight", "battery"],
 
         "hyprland/workspaces#internal": {
             "format": "{icon}",
@@ -50,8 +50,10 @@
                 "locked": " A",
                 "unlocked": ""
             },
-            "device-path": "/dev/input/by-path/pci-0000:00:14.0-usb-0:2:1.0-event-kbd"
-            // Execute this command to identify device name: ls -l /dev/input/by-path/{device-name}
+            "device-path": "/dev/input/event4"
+            // "device-path": "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
+            // Execute this command to identify device name: ls -l /dev/input/by-path/ | grep -i kbd
+            // Use sudo evtest /dev/input/eventX to test the correct keyboard
         },
 
         "clock": {
@@ -80,6 +82,13 @@
             "format": "󰥔  {:%I:%M %p}",
             "format-alt": "󰥔  {:%a, %d  %b  %I:%M %p}",
             "interval": 1
+        },
+
+        "hyprland/language": {
+            "format": "{}  ",
+            "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+            "format-es": "ESP",
+            "format-en": "ENG"
         },
 
         "bluetooth": {
@@ -148,9 +157,9 @@
         "layer": "top",
         "position": "top",
         "margin-top": 13,
-        "modules-left": ["hyprland/workspaces#external", "custom/mic", "custom/camera", "keyboard-state"],
+        "modules-left": ["hyprland/workspaces#external", "custom/mic", "custom/camera"],
         "modules-center": ["clock"],
-        "modules-right": ["bluetooth", "network", "pulseaudio", "backlight", "battery"],
+        "modules-right": ["hyprland/language", "bluetooth", "network", "pulseaudio", "backlight", "battery"],
 
         "hyprland/workspaces#external": {
             "format": "{icon}",
@@ -194,8 +203,10 @@
                 "locked": " A",
                 "unlocked": ""
             },
-            "device-path": "/dev/input/by-path/pci-0000:00:14.0-usb-0:2:1.0-event-kbd"
-            // Execute this command to identify device name: ls -l /dev/input/by-path/{device-name}
+            "device-path": "/dev/input/event4"
+            // "device-path": "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
+            // Execute this command to identify device name: ls -l /dev/input/by-path/ | grep -i kbd
+            // Use sudo evtest /dev/input/eventX to test the correct keyboard
         },
 
         "clock": {
@@ -224,6 +235,13 @@
             "format": "󰥔  {:%I:%M %p}",
             "format-alt": "󰥔  {:%a, %d  %b  %I:%M %p}",
             "interval": 1
+        },
+
+        "hyprland/language": {
+            "format": "{}  ",
+            "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+            "format-es": "ESP",
+            "format-en": "ENG"
         },
 
         "bluetooth": {

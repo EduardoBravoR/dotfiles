@@ -1,93 +1,94 @@
 * {
-    font-family: 'FiraCode Nerd Font', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 8px;
+  font-family: "FiraCode Nerd Font", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
 }
 
 window#waybar {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 #workspaces button {
-    color: #ABB2BF;
+  color: #abb2bf;
 }
 
 #workspaces button.active {
-    color: #E5C07B;
+  color: #e5c07b;
 }
 
 #workspaces button.empty {
-    color: #5C6370;
+  color: #5c6370;
 }
 
 #workspaces button.urgent {
-    color: #E06C75;
+  color: #e06c75;
 }
 
 .modules-left {
-    background-color: transparent;
-    margin-left: 12px;
+  background-color: transparent;
+  margin-left: 12px;
 }
 
 .modules-center {
-    background-color: transparent;
-    margin-left: 12px;
-    margin-right: 12px;
+  background-color: transparent;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .modules-right {
-    background-color: transparent;
-    margin-right: 12px;
+  background-color: transparent;
+  margin-right: 12px;
 }
 
 #workspaces {
-    background-color: #282C34;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 5px;
+  background-color: #282c34;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 5px;
 }
 
 #custom-mic {
-    background-color: #98C379;
-    color: #282C34;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 5px;
+  background-color: #98c379;
+  color: #282c34;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 5px;
 }
 
 #custom-camera {
-    background-color: #E5C07B;
-    color: #282C34;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 5px;
+  background-color: #e5c07b;
+  color: #282c34;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 5px;
 }
 
 #keyboard-state {
-    color: #ABB2BF;
-    padding-left: 15px;
-    padding-right: 15px;
+  color: #abb2bf;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #clock {
-    background-color: #282C34;
-    padding-left: 15px;
-    padding-right: 15px;
+  background-color: #282c34;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
+#language,
 #bluetooth,
 #network,
 #pulseaudio,
 #backlight {
-    background-color: #282C34;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 5px;
+  background-color: #282c34;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 5px;
 }
 
 #battery {
-    background-color: #282C34;
-    padding-left: 15px;
-    padding-right: 15px;
+  background-color: #282c34;
+  padding-left: 15px;
+  padding-right: 15px;
 }
