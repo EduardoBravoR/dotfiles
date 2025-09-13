@@ -232,8 +232,8 @@
                 "on-scroll-up": "shift_up",
                 "on-scroll-down": "shift_down"
             },
-            "format": "󰥔  {:%I:%M %p}",
-            "format-alt": "󰥔  {:%a, %d  %b  %I:%M %p}",
+            "format": "󰥔  {:%a, %d  %b  %I:%M %p}",
+            "format-alt": "󰥔  {:%I:%M %p}",
             "interval": 1
         },
 
