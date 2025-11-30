@@ -1,75 +1,53 @@
 :root {
-  /* ==================================== */
-  /* One Dark Pro Color Variables */
-  /* ==================================== */
+  /* One Dark Pro Palette */
+  --one-dark-bg: 40, 44, 52; /* #282c34 -> 40, 44, 52 */
+  --one-dark-bg-light: 49, 53, 62; /* Ligeramente más claro para hover */
+  --one-dark-fg: 171, 178, 191; /* #abb2bf -> 171, 178, 191 */
+  --one-dark-blue: 97, 175, 239; /* #61afef -> 97, 175, 239 */
+  --one-dark-border: 68, 76, 90; /* #444C5A -> Borde sutil */
+  --one-dark-red: 224, 108, 117; /* #e06c75 */
 
-  /* Centro de Control (Fondo Oscuro: #282C34) */
-  --cc-bg: rgba(40, 44, 52, 0.95);
-
-  /* Borde de Notificación (Gris sutil: #4B5263) */
-  --noti-border-color: rgba(75, 82, 99, 0.5);
-
-  /* Fondo de Notificación (Tarjeta: #323842). Usamos los valores RGB para transparencia. */
-  --noti-bg: 50, 56, 66; /* RGB de #323842 */
+  /* Variables de SwayNC actualizadas */
+  --cc-bg: rgba(var(--one-dark-bg), 0.9); /* Centro de Control */
+  --noti-border-color: rgba(var(--one-dark-fg), 0.15); /* Borde de notificación */
+  --noti-bg: var(--one-dark-bg); /* Fondo de notificación (usando RGB para alpha) */
   --noti-bg-alpha: 0.95;
+  --noti-bg-darker: rgb(40, 44, 52); /* #282c34 */
+  --noti-bg-hover: rgb(var(--one-dark-bg-light)); /* Fondo al pasar el ratón */
+  --noti-bg-focus: rgba(var(--one-dark-bg-light), 0.6);
+  --noti-close-bg: rgba(var(--one-dark-fg), 0.1);
+  --noti-close-bg-hover: rgba(var(--one-dark-fg), 0.15);
+  --text-color: rgb(var(--one-dark-fg));
+  --text-color-disabled: rgb(150, 150, 150);
+  --bg-selected: rgb(var(--one-dark-blue));
 
-  /* Fondo más oscuro (para diferenciar secciones, basado en #21252B) */
-  --noti-bg-darker: rgb(33, 37, 43);
-
-  /* Fondo al pasar el ratón (Ligeramente más claro que la tarjeta) */
-  --noti-bg-hover: rgb(63, 69, 82); /* Basado en #3f4552 */
-
-  /* Fondo al estar enfocado */
-  --noti-bg-focus: rgba(75, 82, 99, 0.7); /* Basado en #4B5263 */
-
-  /* Fondo de botón de cerrar (Gris medio: #5C6370) */
-  --noti-close-bg: rgb(92, 99, 112);
-
-  /* Fondo de botón de cerrar al pasar el ratón */
-  --noti-close-bg-hover: rgb(110, 118, 129);
-
-  /* Color de texto principal (Texto Principal: #ABB2BF) */
-  --text-color: rgb(171, 178, 191);
-
-  /* Color de texto deshabilitado (Gris sutil: #5C6370) */
-  --text-color-disabled: rgb(92, 99, 112);
-
-  /* Fondo seleccionado/Acento (Azul brillante: #61AFEF) */
-  --bg-selected: rgb(97, 175, 239);
-
-  /* --- Estilos de Apariencia (Manteniendo tus valores) --- */
+  /* Dimensiones y estilos que conservamos */
   --notification-icon-size: 64px;
   --notification-app-icon-size: calc(var(--notification-icon-size) / 3);
   --notification-group-icon-size: 32px;
   --border: 1px solid var(--noti-border-color);
-  --border-radius: 8px; /* Ligeramente más pequeño para un look más moderno */
+  --border-radius: 12px;
   --notification-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3),
     0 1px 3px 1px rgba(0, 0, 0, 0.7), 0 2px 6px 2px rgba(0, 0, 0, 0.3);
   --font-size-body: 15px;
   --font-size-summary: 16px;
-
-  /* Variables de transición (sin cambios) */
-  --hover-tranistion: background 0.15s ease-in-out;
-  --group-collapse-tranistion: opacity 400ms ease-in-out;
-  --hover-transition: var(--hover-tranistion);
-  --group-collapse-transition: var(--group-collapse-tranistion);
+  --hover-transition: background 0.15s ease-in-out;
+  --group-collapse-transition: opacity 400ms ease-in-out;
 }
 
 /* Fallback for older CSS themes */
-/* Fallback for older CSS themes */
-@define-color cc-bg rgba(46, 46, 46, 0.7);
-@define-color noti-border-color rgba(255, 255, 255, 0.15);
-@define-color noti-bg rgba(48, 48, 48, 0.8);
-@define-color noti-bg-opaque rgb(48, 48, 48);
-@define-color noti-bg-darker rgb(38, 38, 38);
-@define-color noti-bg-hover rgb(56, 56, 56);
-@define-color noti-bg-hover-opaque rgb(56, 56, 56);
-@define-color noti-bg-focus rgba(68, 68, 68, 0.6);
-@define-color noti-close-bg rgba(255, 255, 255, 0.1);
-@define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
-@define-color text-color rgb(255, 255, 255);
+@define-color cc-bg rgba(40, 44, 52, 0.9);
+@define-color noti-border-color rgba(171, 178, 191, 0.15);
+@define-color noti-bg rgba(40, 44, 52, 0.95);
+@define-color noti-bg-darker rgb(40, 44, 52);
+@define-color noti-bg-hover rgb(49, 53, 62);
+@define-color noti-bg-focus rgba(49, 53, 62, 0.6);
+@define-color noti-close-bg rgba(171, 178, 191, 0.1);
+@define-color noti-close-bg-hover rgba(171, 178, 191, 0.15);
+@define-color text-color rgb(171, 178, 191);
 @define-color text-color-disabled rgb(150, 150, 150);
-@define-color bg-selected rgb(0, 128, 255);
+@define-color bg-selected rgb(97, 175, 239);
+
 notificationwindow, blankwindow, blankwindow {
   background: transparent;
 }
@@ -92,7 +70,7 @@ notificationwindow, blankwindow, blankwindow {
 .close-button:hover {
   box-shadow: none;
   background: var(--noti-close-bg-hover);
-  transition: var(--hover-tranistion);
+  transition: var(--hover-transition);
   border: none;
 }
 
@@ -114,7 +92,7 @@ notificationwindow, blankwindow, blankwindow {
   border-radius: var(--border-radius);
   border: var(--border);
   padding: 0;
-  transition: var(--hover-tranistion);
+  transition: var(--hover-transition);
   background: rgba(var(--noti-bg), var(--noti-bg-alpha));
 }
 
@@ -138,7 +116,7 @@ notificationwindow, blankwindow, blankwindow {
   background: transparent;
   border: none;
   color: var(--text-color);
-  transition: var(--hover-tranistion);
+  transition: var(--hover-transition);
   border-radius: var(--border-radius);
 }
 
@@ -368,7 +346,7 @@ notificationwindow, blankwindow, blankwindow {
 
 .control-center .control-center-list .notification .notification-default-action,
 .control-center .control-center-list .notification .notification-action {
-  transition: var(--group-collapse-tranistion), var(--hover-tranistion);
+  transition: var(--group-collapse-transition), var(--hover-transition);
 }
 
 .control-center .control-center-list .notification .notification-default-action:hover,
@@ -504,21 +482,9 @@ notificationwindow, blankwindow, blankwindow {
 /* Menubar widget */
 .widget-menubar {
   /* The revealer buttons */
-  /* .AnyName { Name defined in config after #
-    background-color: rgba(var(--noti-bg), 1.0);
-    padding: 8px;
-    margin: 8px;
-    border-radius: 12px;
-  }
-
-  .AnyName>button {
-    background: transparent;
-    border: none;
-  }
-
-  .AnyName>button:hover {
-    background-color: var(--noti-bg-hover);
-  } */
+  /* The left button container */
+  /* The right button container */
+  /* The left and right button container */
 }
 
 .widget-menubar > .menu-button-bar {
@@ -565,7 +531,7 @@ notificationwindow, blankwindow, blankwindow {
 }
 
 .per-app-volume {
-  background-color: var(--noti-bg-alt);
+  background-color: var(--noti-bg-darker); /* Usamos el fondo más oscuro */
   margin: 8px;
   margin-bottom: 0;
   border-radius: var(--border-radius);
