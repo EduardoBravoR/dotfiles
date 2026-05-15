@@ -1,0 +1,24 @@
+# ------------------------------------
+# Paleta de Colores: Catppuccin (Frappé)
+# ------------------------------------
+
+# Colores Base
+color_bg_main=#303446  # Base
+color_fg_main=#C6D0F5  # Text
+color_mantel=#292C3C   # Tono más oscuro de fondo
+color_surface=#414559  # Selection/Surface
+
+# Colores Acento (Todos los 12 colores distintivos)
+color_rosewater=#F2D5CF
+color_flamingo=#EEBEBA
+color_pink=#F5BDE6
+color_mauve=#CA9EE6
+color_red=#E78284
+color_maroon=#E9A99A
+color_peach=#F0C6AA
+color_yellow=#E5C890
+color_green=#A6D189
+color_teal=#81C8BE
+color_sky=#99D1DB
+color_blue=#8CAAEE
+color_lavender=#BABBFF

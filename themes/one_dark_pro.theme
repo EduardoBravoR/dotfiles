@@ -1,0 +1,25 @@
+# ------------------------------------
+# Paleta de Colores: One Dark Pro (Dark)
+# ------------------------------------
+
+# Colores Base
+color_bg_main=#282C34
+color_fg_main=#ABB2BF
+color_comment=#5C6370
+color_selection_bg=#3A3F4B
+
+# Colores Acento / ANSI Estándar
+color_black=#282C34
+color_red=#E06C75
+color_green=#98C379
+color_yellow=#E5C07B
+color_blue=#61AFEF
+color_magenta=#C678DD
+color_cyan=#56B6C2
+color_white=#ABB2BF
+
+color_whiskey=#D19A66
+color_deepRed=#BE5046
+color_dark=#7F848E
+color_error=#F44747
+color_invalid=#FFFFFF

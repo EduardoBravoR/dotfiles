@@ -1,0 +1,20 @@
+# ------------------------------------
+# Paleta de Colores: Ayu (Mirage) - CORREGIDO
+# Basado en la paleta más común (VS Code / oficial)
+# ------------------------------------
+
+# Colores Base
+color_bg_main=#212733
+color_fg_main=#CBCCC6
+color_comment=#5C6773
+color_selection_bg=#283141
+
+# Colores Acento / ANSI Estándar
+color_black=#212733
+color_red=#EF7E7E
+color_green=#A8CC78
+color_yellow=#FFAD66
+color_blue=#68AEF1
+color_magenta=#F28AE2
+color_cyan=#70D0E8
+color_white=#CBCCC6

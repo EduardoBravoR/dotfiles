@@ -1,0 +1,20 @@
+# ------------------------------------
+# Paleta de Colores: Dracula
+# ------------------------------------
+
+# Colores Base
+color_bg_main=#282A36
+color_fg_main=#F8F8F2
+color_comment=#6272A4
+color_selection_bg=#44475A
+
+# Colores Acento / ANSI Estándar
+color_black=#21222C
+color_red=#FF5555
+color_green=#50FA7B
+color_yellow=#F1FA8C
+color_blue=#BD93F9 # Nota: BD93F9 (Purple) es usado como 'Blue' principal.
+color_magenta=#FF79C6
+color_cyan=#8BE9FD
+color_white=#F8F8F2
+color_orange=#FFB86C # El naranja es un color de acento clave en Dracula.

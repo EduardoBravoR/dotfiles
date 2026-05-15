@@ -1,0 +1,19 @@
+# ------------------------------------
+# Paleta de Colores: Monokai Pro (Pro)
+# ------------------------------------
+
+# Colores Base
+color_bg_main=#2D2A2E
+color_fg_main=#FBF3E4
+color_comment=#727072
+color_selection_bg=#49474A
+
+# Colores Acento / ANSI Estándar
+color_black=#2D2A2E
+color_red=#FF6188
+color_green=#A9DC76
+color_yellow=#FFD866
+color_blue=#78DCE8
+color_magenta=#AB9DF2
+color_orange=#FC9867
+color_white=#FBF3E4

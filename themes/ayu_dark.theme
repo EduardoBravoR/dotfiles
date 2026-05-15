@@ -1,0 +1,21 @@
+# ------------------------------------
+# Paleta de Colores: Ayu (Dark) - CORREGIDO OFICIAL
+# Basado en la paleta estándar de Teabyii (creador)
+# ------------------------------------
+
+# Colores Base
+color_bg_main=#0A141A
+color_fg_main=#E6E1DC
+color_comment=#5C6773
+color_selection_bg=#1B232E
+
+# Colores Acento / ANSI Estándar
+color_black=#0A141A
+color_red=#F07178
+color_green=#98C379
+color_yellow=#FFB454
+color_blue=#59C2FF
+color_magenta=#C678DD
+color_cyan=#95E6CB
+color_white=#E6E1DC
+color_orange=#FF8F40

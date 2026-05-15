@@ -1,0 +1,24 @@
+# ------------------------------------
+# Paleta de Colores: Catppuccin (Macchiato)
+# ------------------------------------
+
+# Colores Base
+color_bg_main=#24273A  # Base
+color_fg_main=#CAD3F5  # Text
+color_mantel=#181926   # Tono más oscuro de fondo
+color_surface=#363A4F  # Selection/Surface
+
+# Colores Acento (Todos los 12 colores distintivos)
+color_rosewater=#F4DBD6
+color_flamingo=#EEBEBA
+color_pink=#F5BDE6
+color_mauve=#C6A0F6
+color_red=#E78284
+color_maroon=#EA999C
+color_peach=#F5A97F
+color_yellow=#EED49F
+color_green=#A6DA95
+color_teal=#94E2D5
+color_sky=#89DCEB
+color_blue=#8AADF4
+color_lavender=#B7BDF8
